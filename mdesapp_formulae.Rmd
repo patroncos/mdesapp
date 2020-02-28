@@ -61,12 +61,15 @@ $R^2_2$ is the proportion of the variance accounted for by the baseline covariat
 # Variance accounted for by a baseline covariate
 
 
-$R^2_1$ and $R^2_2$ are not to be confused with the coefficient of determination $R^2$ (R-squared) that is used in single-level regression. There is no exact equivalent for $R^2$ in multilevel regression.
+$R^2_1$ and $R^2_2$ are not to be confused with the pre-post test correlation $R$ (Pearson correlation) or the coefficient of determination $R^2$ (R-squared) that is used in single-level regression. There is no exact equivalent for $R^2$ in multilevel regression.
 
-When an individual level baseline covariate is added to a multilevel model, it has the potential to affect the variance at the individual and cluster level. Hence, $R^2_2$ should very rarely be zero (or close to zero) when you have an individual baseline covariate.
-If $R^2_2$ is ignored in this case, the MDES is overestimated.
+When an individual level baseline covariate is added to a multilevel model, it has the potential to affect the variance at the individual and cluster level. Hence, $R^2_2$ should rarely be zero (or close to zero) when you have an individual baseline covariate.
+
+One common mistake is to assume that the squared pre-post test correlation (at the individual level) is the same as the variance accounted for by the covariate at level 1 ($R^2=R^2_1$) and leave the variance accounted for by the covariate at level 2 as zero ($R^2_2=0$). In such situation, the MDES is overestimated.
 
 In multilevel regression, the proportion of variance accounted for (or predicted) by the covariate (also known as variance explained) is obtained as follows: 
+
+***
 
 At level 1: 
 
@@ -78,6 +81,8 @@ $\sigma^2_{e, m0}$ is the variance at level 1 (individuals) in the empty multile
 
 $\sigma^2_{e, m1}$ is the variance at level 1 (individuals) in the multilevel model with the baseline covariate
 
+***
+
 At level 2: 
 
 $$R^2_2 = \frac{\sigma^2_{j, m0} - \sigma^2_{j, m1}}{\sigma^2_{j, m0}}$$
@@ -88,6 +93,8 @@ $\sigma^2_{j, m0}$ is the variance at level 2 (clusters) in the empty multilevel
 
 $\sigma^2_{j, m1}$ is the variance at level 1 (clusters) in the multilevel model with the baseline covariate
 
+
+***
 
 In words, the procedure would be as such :
 

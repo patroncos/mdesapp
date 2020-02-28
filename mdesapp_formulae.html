@@ -369,7 +369,8 @@ summary {
 </div>
 
 
-<p>This is a companion document to the “<strong>mdesapp</strong>” available <a href="https://patricio-troncoso.shinyapps.io/mdesapp/"><strong>here</strong></a></p>
+<p>This is a companion document to the “<strong>mdesapp</strong>” online calculator, which is available <a href="https://patricio-troncoso.shinyapps.io/mdesapp/"><strong>here</strong></a>.</p>
+<p>The GitHub repository for this app is <a href="https://github.com/patroncos/mdesapp"><strong>this</strong></a>.</p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>“<strong>mdesapp</strong>” is an online calculator that provides the Minimum Detectable Effect Size (MDES) in a <strong>2-level Clustered Randomised Control Trial</strong> setting.</p>
@@ -391,24 +392,28 @@ summary {
 <p><span class="math inline">\(R^2_1\)</span> is the proportion of the variance accounted for by the baseline covariate at the individual (pupils) level</p>
 <p><span class="math inline">\(R^2_2\)</span> is the proportion of the variance accounted for by the baseline covariate at the cluster (schools or classes) level</p>
 <hr />
-<p><em>Note:</em> As mentioned in the EEF guidelines, when 20 or more clusters (schools or classes) are randomised, the multiplier <span class="math inline">\(M_{J-k}\)</span> takes the value of 2.8 for a two-tailed MDES and 2.5 for a one-tailed MDES, when <span class="math inline">\(\alpha = 0.05\)</span> (statistical significance) and <span class="math inline">\(\beta = 0.8\)</span> (statistical power). The <a href="https://patricio-troncoso.shinyapps.io/mdesapp/"><strong>mdesapp</strong></a> fixes these values. Future versions will allow for changing parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
+<p><strong>Note:</strong> As mentioned in the EEF guidelines, when 20 or more clusters (schools or classes) are randomised, the multiplier <span class="math inline">\(M_{J-k}\)</span> takes the value of 2.8 for a two-tailed MDES and 2.5 for a one-tailed MDES, when <span class="math inline">\(\alpha = 0.05\)</span> (statistical significance) and <span class="math inline">\(\beta = 0.8\)</span> (statistical power). The <a href="https://patricio-troncoso.shinyapps.io/mdesapp/"><strong>mdesapp</strong></a> fixes these values. Future versions will allow for changing parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
 <hr />
 </div>
 <div id="variance-accounted-for-by-a-baseline-covariate" class="section level1">
 <h1>Variance accounted for by a baseline covariate</h1>
-<p><span class="math inline">\(R^2_1\)</span> and <span class="math inline">\(R^2_2\)</span> are not to be confused with the coefficient of determination <span class="math inline">\(R^2\)</span> (R-squared) that is used in single-level regression. There is no exact equivalent for <span class="math inline">\(R^2\)</span> in multilevel regression.</p>
-<p>When an individual level baseline covariate is added to a multilevel model, it has the potential to affect the variance at the individual and cluster level. Hence, <span class="math inline">\(R^2_2\)</span> should very rarely be zero (or close to zero) when you have an individual baseline covariate. If <span class="math inline">\(R^2_2\)</span> is ignored in this case, the MDES is overestimated.</p>
+<p><span class="math inline">\(R^2_1\)</span> and <span class="math inline">\(R^2_2\)</span> are not to be confused with the pre-post test correlation <span class="math inline">\(R\)</span> (Pearson correlation) or the coefficient of determination <span class="math inline">\(R^2\)</span> (R-squared) that is used in single-level regression. There is no exact equivalent for <span class="math inline">\(R^2\)</span> in multilevel regression.</p>
+<p>When an individual level baseline covariate is added to a multilevel model, it has the potential to affect the variance at the individual and cluster level. Hence, <span class="math inline">\(R^2_2\)</span> should rarely be zero (or close to zero) when you have an individual baseline covariate.</p>
+<p>One common mistake is to assume that the squared pre-post test correlation (at the individual level) is the same as the variance accounted for by the covariate at level 1 (<span class="math inline">\(R^2=R^2_1\)</span>) and leave the variance accounted for by the covariate at level 2 as zero (<span class="math inline">\(R^2_2=0\)</span>). In such situation, the MDES is overestimated.</p>
 <p>In multilevel regression, the proportion of variance accounted for (or predicted) by the covariate (also known as variance explained) is obtained as follows:</p>
+<hr />
 <p>At level 1:</p>
 <p><span class="math display">\[R^2_1 = \frac{\sigma^2_{e, m0} - \sigma^2_{e, m1}}{\sigma^2_{e, m0}}\]</span></p>
 <p><span class="math display">\[where:\]</span></p>
 <p><span class="math inline">\(\sigma^2_{e, m0}\)</span> is the variance at level 1 (individuals) in the empty multilevel model (without covariates)</p>
 <p><span class="math inline">\(\sigma^2_{e, m1}\)</span> is the variance at level 1 (individuals) in the multilevel model with the baseline covariate</p>
+<hr />
 <p>At level 2:</p>
 <p><span class="math display">\[R^2_2 = \frac{\sigma^2_{j, m0} - \sigma^2_{j, m1}}{\sigma^2_{j, m0}}\]</span></p>
 <p><span class="math display">\[where:\]</span></p>
 <p><span class="math inline">\(\sigma^2_{j, m0}\)</span> is the variance at level 2 (clusters) in the empty multilevel model (without covariates)</p>
 <p><span class="math inline">\(\sigma^2_{j, m1}\)</span> is the variance at level 1 (clusters) in the multilevel model with the baseline covariate</p>
+<hr />
 <p>In words, the procedure would be as such :</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>calculate the difference between the estimated variance in a multilevel model with the baseline covariate and another one without it (empty model);</p></li>
