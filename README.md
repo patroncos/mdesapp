@@ -10,6 +10,8 @@ The specific guideline about MDES is on page 4 and takes the formulae described 
 
 The online **MDES calculator** is available [**here**](https://patricio-troncoso.shinyapps.io/mdesapp/).
 
+The underlying code of **mdesapp** is available [**here**](https://github.com/patroncos/mdesapp/blob/master/app.R).
+
 A more detailed explanation of the underlying formula is available [**here**](https://rpubs.com/patroncos/mdesapp_calculation).
 
 ***
