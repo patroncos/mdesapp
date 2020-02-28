@@ -15,6 +15,8 @@ ui <- fluidPage(headerPanel("Minimum detectable effect size calculator", windowT
                                  the significance level is 0.05.
                                  If you have any comments or suggestions, please contact me via",
                                  a(href="mailto:patricio.troncoso@manchester.ac.uk", "this email")),
+                          tags$p("The Github repository for this app is", a(href="https://github.com/patroncos/mdesapp", "here")),
+                          tags$p("A more detailed explanation of the underlying formula is available", a(href="https://rpubs.com/patroncos/mdesapp_calculation", "here")),
                           tags$p("Latest update: 28/02/2020")),
                 fluidRow(column(12, wellPanel(strong("Instructions: "), "Below are the main parameters 
                                               to calculate the MDES. Default values
@@ -68,8 +70,8 @@ ui <- fluidPage(headerPanel("Minimum detectable effect size calculator", windowT
                 fluidRow(column(12, wellPanel(h3(strong(textOutput("MDES")))), offset = 0.5)),
                 fluidRow(column(10, p(em(strong("Note: "), "Proportion of variance predicted 
                       by the covariate
-                      should not be confused with the ICC. Variance predicted by the covariate 
-                      (also known as variance explained)
+                      should not be confused with the ICC or the R-squared of single-level regression.
+                      Variance predicted by the covariate (also known as variance explained)
                       is obtained in 2 steps (at any level): a) calculate the difference between 
                       the estimated variance in a multilevel model with the baseline 
                       covariate and another one without it (empty model); 
