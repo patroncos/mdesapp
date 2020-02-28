@@ -13,7 +13,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This is a companion document to the "**mdesapp**" available [**here**](https://patricio-troncoso.shinyapps.io/mdesapp/)
+This is a companion document to the "**mdesapp**" online calculator, which is available [**here**](https://patricio-troncoso.shinyapps.io/mdesapp/).
+
+The GitHub repository for this app is [**this**](https://github.com/patroncos/mdesapp).
 
 # Introduction
 
