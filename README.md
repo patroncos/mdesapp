@@ -8,7 +8,7 @@ This tool was created according to the guidelines provided by the Education Endo
 
 The specific guideline about MDES is on page 4 and takes the formulae described in Bloom et al. (2007)[2]
 
-The online tool is available [**here**](https://patricio-troncoso.shinyapps.io/mdesapp/).
+The online **MDES calculator** is available [**here**](https://patricio-troncoso.shinyapps.io/mdesapp/).
 
 A more detailed explanation of the underlying formula is available [**here**](https://rpubs.com/patroncos/mdesapp_calculation).
 
