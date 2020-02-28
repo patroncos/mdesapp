@@ -4,7 +4,7 @@
 This is when whole clusters (instead of individuals) are randomised.
 A typical situation is when complete classes or schools are allocated to either the intervention or the control/comparison group.
 
-This tool was created according to the guidelines provided by the Education Endowment Foundation (EEF, 2013), which are available [**here**]("https://educationendowmentfoundation.org.uk/public/files/Evaluation/Writing_a_Protocol_or_SAP/Pre-testing_paper.pdf").
+This tool was created according to the guidelines provided by the Education Endowment Foundation (EEF, 2013), which are available [**here**](https://educationendowmentfoundation.org.uk/public/files/Evaluation/Writing_a_Protocol_or_SAP/Pre-testing_paper.pdf).
 
 The online tool is available [**here**](https://patricio-troncoso.shinyapps.io/mdesapp/)
 
