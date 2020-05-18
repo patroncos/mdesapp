@@ -54,7 +54,7 @@ $R^2_2$ is the proportion of the variance accounted for by the baseline covariat
 
 ***
 
-**Note:** As mentioned in the EEF guidelines, when 20 or more clusters (schools or classes) are randomised, the multiplier $M_{J-k}$ takes the value of 2.8 for a two-tailed MDES and 2.5 for a one-tailed MDES, when $\alpha = 0.05$ (statistical significance) and $\beta = 0.8$ (statistical power). The [**mdesapp**](https://patricio-troncoso.shinyapps.io/mdesapp/) fixes these values. Future versions will allow for changing parameters $\alpha$ and $\beta$.  
+**Note:** As mentioned in the EEF guidelines, when 20 or more clusters (schools or classes) are randomised, the multiplier $M_{J-k}$ takes the value of 2.8 for a two-tailed MDES and 2.5 for a one-tailed MDES, when $\alpha = 0.05$ (statistical significance) and $1-\beta = 0.8$ (statistical power). The [**mdesapp**](https://patricio-troncoso.shinyapps.io/mdesapp/) fixes these values. Future versions will allow for changing parameters $\alpha$ and $1-\beta$.  
 
 ***
 
